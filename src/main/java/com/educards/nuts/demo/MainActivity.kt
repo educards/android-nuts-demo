@@ -1,6 +1,7 @@
 package com.educards.nuts.demo
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
@@ -17,6 +18,10 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+    }
+
+    fun fetchSampleData(view: View) {
+        model.fetchSampleData()
     }
 
 }
