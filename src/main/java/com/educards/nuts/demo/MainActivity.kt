@@ -1,11 +1,14 @@
 package com.educards.nuts.demo
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
 import com.educards.nuts.demo.databinding.ActivityMainBinding
 
-class MainActivity: Activity() {
+class MainActivity: AppCompatActivity() {
+
+    private val model: MainActivityModel by viewModels()
 
     private val binding: ActivityMainBinding by lazy {
         inflate(layoutInflater, R.layout.activity_main, null, false) as ActivityMainBinding
