@@ -40,6 +40,9 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    implementation project(':NetworkUiTemplates')
+    implementation project(':NetworkUiTemplatesRetrofit2')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -48,13 +51,21 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$activity_version"
 
     def lifecycle_version = "2.2.0" // https://developer.android.com/jetpack/androidx/releases/lifecycle
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version" // ViewModel
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version" // LiveData
 
     def material_version = "1.2.1" // https://github.com/material-components/material-components-android/releases/
     implementation "com.google.android.material:material:$material_version"
+
+    // Retrofit (https://github.com/square/retrofit)
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.8'
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.10"
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava:2.9.8'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.8'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
