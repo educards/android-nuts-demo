@@ -37,8 +37,9 @@
 
         <TextView
             android:id="@+id/response_text"
-            android:text="Fetch sample data from TODO(serverURI)"
+            android:text="Fetch sample data from TODO(serverURI) asdfpoiajs dfpoaisijd fpaoisjd fpaosidj fpaosidj fpaosidj fapsodijf apsodijf aspoidjf apsoidj"
             android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+            android:layout_margin="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
